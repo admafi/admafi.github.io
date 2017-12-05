@@ -48,13 +48,18 @@ font-size: 120%;
 top: 20px;
 }
 
+#discord {
+text-align: left;
+position: relative;
+left: -10px;
+top: 50px;
+}
+
 #content {
 
 text-align: left;
 position: relative;
 font-size: 100%;
-left: -10px;
-top: -450px;
 height: 40px;
 width: 600px;	
 }

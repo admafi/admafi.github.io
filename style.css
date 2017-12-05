@@ -1,6 +1,6 @@
 body {
 
-background-color: #000;
+background: url(wallpaperquake.jpg) no-repeat center center fixed;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -15,13 +15,13 @@ body, table, td, tr, p, div, a {
 	}
 
 a {
-
+color: #DA4D00;
 text-decoration:none
 }
 
 a:hover {
 
-color: #777;
+color: #888;
 }
 
 table td, table td * {
@@ -38,21 +38,14 @@ width: 900px;
 #top {
 text-align: left;
 position: relative;
-font-size: 150%;
-left: -60px;
-top: -570px;
-height: 20px;
-width: 500px;	
+font-size: 200%;
 }
 
 #menu {
 text-align: left;
 position: relative;
-font-size: 150%;
-left: -100px;
-top: -500px;
-height: 40px;
-width: 500px;	
+font-size: 120%;
+top: 20px;
 }
 
 #content {

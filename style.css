@@ -1,6 +1,6 @@
 body {
 
-background: url(wallpaperquake.jpg) no-repeat center center fixed;
+background: url(background.jpg) no-repeat center center fixed;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -12,72 +12,16 @@ body, table, td, tr, p, div, a {
 
 	font-family: Verdana, Geneva, sans-serif;
 	color: #ffffff;
+
 	}
 
 a {
-color: #DA4D00;
-text-decoration:none
+
+
 }
 
 a:hover {
 
-color: #888;
+color: #777;
 }
 
-table td, table td * {
-    vertical-align: top;
-}
-
-#background {
-
-height: 720px;
-width: 900px;
-
-}
-
-#top {
-text-align: left;
-position: relative;
-font-size: 200%;
-}
-
-#menu {
-text-align: left;
-position: relative;
-font-size: 120%;
-top: 20px;
-}
-
-#discord {
-text-align: left;
-position: relative;
-left: -10px;
-top: 50px;
-}
-
-#content {
-
-text-align: left;
-position: relative;
-font-size: 100%;
-height: 40px;
-width: 600px;	
-}
-
-#footer {
-text-align: left;
-position: relative;
-top: 55px;
-height: 50px
-}
-
-#prefooter {
-text-align: left;
-position: relative;
-top: 50px;
-
-}
-td, tr { 
-    padding-left: 40px;
-	margin: 0px;
-}

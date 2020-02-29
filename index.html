@@ -1,27 +1,294 @@
-<!DOCTYPE html>
-<html>
+ <html>
 <head>
-<title>QLRACE</title>
+<title>JKHub Wiki Tournament Entry Creator</title>
 <link href="style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-<div id="top">
-<b>QLRACE</b>
-</div>
-<div id="menu">
-<a href="https://qlrace.com">qlrace.com</a>
+
+<h1>JKHub Wiki Tournament Entry Creator</h1>
+<label>
+    Cup Date:
+    <input type="text" id="date" placeholder="2005.02">
+</label>
 <br>
-<a href="downloads.html">downloads</a>
+<label>
+    League: 
+    <select onchange="selectotherleague();" onfocus="this.selectedIndex = -1;" id="league">
+  <option value="[[File:zzllogo_small.gif|alt=ESL|ESL]]">ESL</option>
+  <option value="EPIC">EPIC</option>
+  <option value="RJ">RJ</option>
+  <option value="BJA">BJA</option>
+  <option value="[[File:tja.png|alt=TJA|TJA]]">TJA</option>
+  <option value="ZEDI">ZEDI</option>
+  <option value="JK2W">JK2W</option>
+  <option value="SoL">SoL</option>
+  <option value="TOR">TOR</option>
+  <option value="?">?</option>
+  <option value="other">Other (specify)</option>
+  <input id="otherleague" placeholder="League">
+</select>
+</label>
 <br>
-<a href="tutorials.html">tutorials</a>
+<label>
+    URL: 
+    <input type="text" id="url" placeholder="https://play.eslgaming.com/archive/esl-europe/eu/jkja/1on1saber/febcup2005/rankings/" size="100">
+</label>
 <br>
-<a href="links.html">links</a>
+<label>
+    Name:
+    <input id="name" placeholder="Bantha Cup Feb 05">
+</label>
 <br>
-<a href="videos.html">videos</a>
+<label>
+    Cup Region: 
+      <select id="region">
+  <option value="[[File:int.png]]">International</option>
+  <option value="[[File:ger.png]]">Germany</option>
+  <option value="[[File:pl.png]]">Poland</option>
+  <option value="[[File:hun.png]]">Hungary</option>
+  <option value="[[File:rus.png]]">Russia</option>
+  <option value="[[File:uk.png]]">United Kingdom</option>
+  <option value="[[File:usa.png]]">USA</option>
+  <option value="[[File:aut.png]]">Austria</option>
+  <option value="[[File:bel.png]]">Belgium</option>
+  <option value="[[File:can.png]]">Canada</option>
+  <option value="[[File:swe.png]]">Sweden</option>
+  <option value="[[File:ro.png]]">Romania</option>
+  <option value="[[File:swi.png]]">Switzerland</option>
+  <option value="[[File:ukr.png]]">Ukraine</option>
+  <option value="[[File:ita.png]]">Italia</option>
+  <option value="[[File:ni.png]]">Netherlands</option>
+  <option value="[[File:no.png]]">Norway</option>
+  <option value="[[File:fin.png]]">Finland</option>
+</select>
+</label>
 <br>
-</div>
-<div id="discord">
-<a href="https://discord.gg/VFYwJCs"><img border="0" alt="Discord" src="discord.png" width="10%" height="10%"></a>
-</div>
+<label>
+    Format: 
+    <select id="format">
+  <option value="1v1">1v1</option>
+  <option value="2v2">2v2</option>
+  <option value="TDM">TDM</option>
+  <option value="CTF">CTF</option>
+  <option value="4v4">4v4</option>
+  <option value="MBII">MBII</option>
+</select>
+</label>
+<br>
+<label>
+    Participants 
+    <input id="participants" placeholder="064" >
+</label>
+<br>
+<label>
+    Winner #1: 
+    <input id="winner1" placeholder="Dureal">
+  <select id="winner1nat">
+  <option value="[[File:int.png]]">International</option>
+  <option value="[[File:ger.png]]">Germany</option>
+  <option value="[[File:pl.png]]">Poland</option>
+  <option value="[[File:hun.png]]">Hungary</option>
+  <option value="[[File:rus.png]]">Russia</option>
+  <option value="[[File:uk.png]]">United Kingdom</option>
+  <option value="[[File:usa.png]]">USA</option>
+  <option value="[[File:aut.png]]">Austria</option>
+  <option value="[[File:bel.png]]">Belgium</option>
+  <option value="[[File:can.png]]">Canada</option>
+  <option value="[[File:swe.png]]">Sweden</option>
+  <option value="[[File:ro.png]]">Romania</option>
+  <option value="[[File:swi.png]]">Switzerland</option>
+  <option value="[[File:ukr.png]]">Ukraine</option>
+  <option value="[[File:ita.png]]">Italia</option>
+  <option value="[[File:ni.png]]">Netherlands</option>
+  <option value="[[File:no.png]]">Norway</option>
+  <option value="[[File:fin.png]]">Finland</option>
+</select>
+</label>
+<br>
+<label>
+    Winner #2: 
+    <input id="winner2" placeholder="Xerxes">
+	  <select id="winner2nat">
+  <option value="[[File:int.png]]">International</option>
+  <option value="[[File:ger.png]]">Germany</option>
+  <option value="[[File:pl.png]]">Poland</option>
+  <option value="[[File:hun.png]]">Hungary</option>
+  <option value="[[File:rus.png]]">Russia</option>
+  <option value="[[File:uk.png]]">United Kingdom</option>
+  <option value="[[File:usa.png]]">USA</option>
+  <option value="[[File:aut.png]]">Austria</option>
+  <option value="[[File:bel.png]]">Belgium</option>
+  <option value="[[File:can.png]]">Canada</option>
+  <option value="[[File:swe.png]]">Sweden</option>
+  <option value="[[File:ro.png]]">Romania</option>
+  <option value="[[File:swi.png]]">Switzerland</option>
+  <option value="[[File:ukr.png]]">Ukraine</option>
+  <option value="[[File:ita.png]]">Italia</option>
+  <option value="[[File:ni.png]]">Netherlands</option>
+  <option value="[[File:no.png]]">Norway</option>
+  <option value="[[File:fin.png]]">Finland</option>
+</select>
+</label>
+<br>
+<label>
+    Winner #3: 
+    <input id="winner3" placeholder="zentur1o">
+	  <select id="winner3nat">
+  <option value="[[File:int.png]]">International</option>
+  <option value="[[File:ger.png]]">Germany</option>
+  <option value="[[File:pl.png]]">Poland</option>
+  <option value="[[File:hun.png]]">Hungary</option>
+  <option value="[[File:rus.png]]">Russia</option>
+  <option value="[[File:uk.png]]">United Kingdom</option>
+  <option value="[[File:usa.png]]">USA</option>
+  <option value="[[File:aut.png]]">Austria</option>
+  <option value="[[File:bel.png]]">Belgium</option>
+  <option value="[[File:can.png]]">Canada</option>
+  <option value="[[File:swe.png]]">Sweden</option>
+  <option value="[[File:ro.png]]">Romania</option>
+  <option value="[[File:swi.png]]">Switzerland</option>
+  <option value="[[File:ukr.png]]">Ukraine</option>
+  <option value="[[File:ita.png]]">Italia</option>
+  <option value="[[File:ni.png]]">Netherlands</option>
+  <option value="[[File:no.png]]">Norway</option>
+  <option value="[[File:fin.png]]">Finland</option>
+</select>
+</label>
+<br>
+<br>
+<button onclick="generate()">Generate</button>
+<br>
+<br>
+<label>
+   Output: 
+<input id="output" placeholder="Tournament Code" size="200">
+</label>
+<br>
+<br>
+<button onclick="reset()">Reset all fields</button>
+<br>
+<br>
+<br>
+<br>
+<b><a href="https://jkhub.org/wiki/index.php?title=Tournament">Tournament Page</a></b>
+<br>
+<br>
+<br>
+<br>
+by afi
 </body>
 </html>
+</body>
+
+<script>
+function generate() {
+var output = document.getElementById('output');
+var date = document.getElementById('date');
+var league = document.getElementById('league');
+var otherleague = document.getElementById('otherleague');
+var url = document.getElementById('url');
+var name = document.getElementById('name');
+var region = document.getElementById('region');
+var format = document.getElementById('format');
+var participants = document.getElementById('participants');
+var winner1 = document.getElementById('winner1');
+var winner1nat = document.getElementById('winner1nat');
+var winner2 = document.getElementById('winner2');
+var winner2nat = document.getElementById('winner2nat');
+var winner3 = document.getElementById('winner3');
+var winner3nat = document.getElementById('winner3nat');
+
+var bracket1 = '[';
+var bracket2 = ']';
+var space = ' ';
+var leagueunknown = 'undefined';
+var outputleague;
+
+if (league.selectedIndex == 10)
+	{
+		if (otherleague.value.length > 0)
+		{
+			outputleague = otherleague;
+		}
+		else 
+		{
+			outputleague = leagueunknown;
+		}
+		
+	}
+else
+	{
+		outputleague = league;
+	}
+
+if (url.value.length == 0)
+	{
+		bracket1 = '';
+		bracket2 = '';
+		space = '';
+	}
+
+if (winner2.value.length == 0)
+	{
+		winner2nat.value = '';
+	}
+
+if (winner3.value.length == 0)
+	{
+		winner3nat.value = '';
+	}
+
+    var str = '|' + date.value + 
+        '||' + outputleague.value +
+        '||' + bracket1 + url.value +
+		space + name.value + bracket2+
+		'||' + region.value +
+		'||' + format.value +
+		'||' + participants.value +
+		'||' + winner1nat.value +
+		' ' + winner1.value +
+		'||' + winner2nat.value +
+		' ' + winner2.value +
+		'||' + winner3nat.value +
+		' ' + winner3.value;
+    document.getElementById('output').value=str;
+};
+
+
+function reset() {
+var elements = document.getElementsByTagName("input");
+for (var ii=0; ii < elements.length; ii++) {
+  if (elements[ii].type == "text") {
+    elements[ii].value = "";
+  }
+  document.getElementById("otherleague").style.display = 'none';
+}
+var elements2 = document.getElementsByTagName("select");
+for (var aa=0; aa < elements2.length; aa++) {
+	elements2[aa].selectedIndex = 0;
+}
+};
+
+window.onload = function() {
+	if (league.selectedIndex == 10)
+  {
+	  document.getElementById("otherleague").style.display = '';
+  }
+  else
+	{
+  document.getElementById("otherleague").style.display = 'none';
+	}
+};
+
+function selectotherleague() {
+  if (league.selectedIndex == 10)
+  {
+	  document.getElementById("otherleague").style.display = '';
+  }
+  else
+	{
+	  document.getElementById("otherleague").style.display = 'none';
+	}
+};
+</script>
+ </html>

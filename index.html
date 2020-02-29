@@ -201,14 +201,16 @@ var winner3nat = document.getElementById('winner3nat');
 var bracket1 = '[';
 var bracket2 = ']';
 var space = ' ';
-var leagueunknown = 'undefined';
-var outputleague;
+var leagueunknown = '?';
+var outputleague = '';
+var winner2natout = winner2nat.value;
+var winner2natout = winner3nat.value;
 
 if (league.selectedIndex == 10)
 	{
 		if (otherleague.value.length > 0)
 		{
-			outputleague = otherleague;
+			outputleague = otherleague.value;
 		}
 		else 
 		{
@@ -218,7 +220,7 @@ if (league.selectedIndex == 10)
 	}
 else
 	{
-		outputleague = league;
+		outputleague = league.value;
 	}
 
 if (url.value.length == 0)
@@ -230,16 +232,16 @@ if (url.value.length == 0)
 
 if (winner2.value.length == 0)
 	{
-		winner2nat.value = '';
+		winner2natout = '';
 	}
 
 if (winner3.value.length == 0)
 	{
-		winner3nat.value = '';
+		winner3natout = '';
 	}
 
     var str = '|' + date.value + 
-        '||' + outputleague.value +
+        '||' + outputleague +
         '||' + bracket1 + url.value +
 		space + name.value + bracket2+
 		'||' + region.value +
@@ -247,9 +249,9 @@ if (winner3.value.length == 0)
 		'||' + participants.value +
 		'||' + winner1nat.value +
 		' ' + winner1.value +
-		'||' + winner2nat.value +
+		'||' + winner2natout +
 		' ' + winner2.value +
-		'||' + winner3nat.value +
+		'||' + winner3natout +
 		' ' + winner3.value;
     document.getElementById('output').value=str;
 };
